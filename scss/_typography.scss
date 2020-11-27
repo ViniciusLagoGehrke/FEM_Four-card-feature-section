@@ -1,0 +1,39 @@
+@import 'https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap';
+
+* {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+body {
+    font-size: 15px;
+}
+
+.attribution {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.titles {
+    text-align: center;
+
+    .main-title,
+    .secondary-title {
+        font-size: 2rem;
+    }
+
+    .main-title {
+        font-weight: 200;
+    }
+
+    .secondary-title {
+        font-weight: 600;
+    }
+}
+
+
+.card-title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,30 @@
+$cardWidth: 350px;
+$cardHeight: 250px;
+$cardGap: 30px;
+$colCount: 3;
+$breakColumn: 1110px;
+$imgHeight: 64px;
+$sectionGap: 60px;
+$marginTitle: 15px;
+
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+@mixin displayFlex ($direction, $justifyContent, $alignItems, $wrap) {
+    display: flex;
+    flex-flow: $direction $wrap;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin displayGrid ($columnsCount, $coulumnWidth, $rowsCount, $rowHeight, $justifyContent, $alignItems, $rowGap, $colGap) {
+    display: grid;
+    grid-template-columns: repeat($columnsCount, $coulumnWidth);
+    grid-template-rows: repeat($rowsCount, $rowHeight);
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+    row-gap: $rowGap;
+    column-gap: $colGap;
+}

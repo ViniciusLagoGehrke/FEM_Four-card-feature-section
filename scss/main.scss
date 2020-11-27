@@ -1,0 +1,133 @@
+@import "variables";
+@import "typography";
+
+html {
+    box-sizing: border-box;
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    height: min-content;
+}
+
+
+main {
+    padding-top: $sectionGap / 2;
+    padding-bottom: $sectionGap;
+}
+
+.titles {
+    margin-bottom: $sectionGap;
+
+    .main-title {
+        margin-bottom: $marginTitle;
+    }
+
+    .secondary-title {
+        margin-bottom: $marginTitle * 2;
+    }
+
+    .info-title {
+        margin: 0 auto;
+        width: 75%;
+    }
+}
+
+
+.card-deck {
+    @include displayGrid(auto-fit, minmax(min-content, $cardWidth), 2, $cardHeight, center, center, $cardGap, $cardGap);
+    margin: 0 auto;
+    max-width: ($cardWidth + $cardGap) * $colCount;
+
+    @media (max-width: $breakColumn) {
+        max-width: ($cardWidth + $cardGap) * ($colCount - 1);
+    }
+
+    .col {
+        width: $cardWidth;
+        grid-row: span 2;
+    }
+
+    .col-1,
+    .col-3 {
+        height: 100%;
+        @include displayFlex(column, center, center, nowrap);
+
+        @media (max-width: $breakColumn) {
+            grid-row: span 1;
+        }
+    }
+
+    .col-2 {
+        height: ($cardHeight * 2) + $cardGap;
+        @include displayFlex(column, space-between, center, nowrap);
+    }
+
+
+
+    .card {
+        @include displayFlex(column, space-between, center, nowrap);
+        width: 100%;
+        height: $cardHeight;
+        padding: $cardGap - 10;
+        position: relative;
+        border-width: 7px 1px 1px 1px;
+        border-style: solid;
+        border-color: transparent;
+        border-radius: 5px;
+        box-shadow: 0 5px 20px rgba($color: #000000, $alpha: 0.2);
+
+        .card-footer,
+        .card-body {
+            width: 100%;
+        }
+
+        .card-footer {
+
+            height: $imgHeight;
+
+            .card-img {
+                margin-left: $cardWidth - ($cardGap * 2) - $imgHeight;
+            }
+
+        }
+
+        .card-title {
+            margin-bottom: $marginTitle - 10;
+        }
+
+        &.supervisor {
+            @extend .card;
+            border-top-color: $cyan;
+
+        }
+
+        &.team-builder {
+            @extend .card;
+            border-top-color: $red;
+        }
+
+        &.calculator {
+            @extend .card;
+            border-top-color: $blue;
+        }
+
+        &.karma {
+            @extend .card;
+            border-top-color: $orange;
+        }
+
+    }
+
+
+}
+
+footer {
+    @include displayFlex(column, center, center, nowrap);
+    height: $sectionGap / 2;
+}
