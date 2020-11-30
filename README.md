@@ -9,9 +9,8 @@ Using Sass as CSS preprocessor and Grid for layout.
 
 ## What I learned in this project
 
-* Mastered my Flexbox skills with flex-basis method.
-* How to set widht with 'em' under media queries.
-* How to properly edit images under IMG tag (inline not a block HTML Element!).
+* Mastered my Grid skills.
+* Pratice Sass using Variables, Nesting and Mixins.
 
 Please check the [live website](https://four-card-feature-section-phi-khaki.vercel.app/)
 
