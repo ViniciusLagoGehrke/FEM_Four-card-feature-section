@@ -1,6 +1,6 @@
 # Four card feature section
 
-Practiced multiple box-shadows including a inset shadow that is 'trimmed' by the container's rounded border.
+Using Sass as CSS preprocessor and Grid for layout.
 
 ![Desktop View](desktop-preview.jpg)
 
