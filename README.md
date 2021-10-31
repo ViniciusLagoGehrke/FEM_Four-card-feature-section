@@ -13,5 +13,3 @@ Using Sass as CSS preprocessor and Grid for layout.
 * Pratice Sass using Variables, Nesting and Mixins.
 
 Please check the [live website](https://four-card-feature-section-phi-khaki.vercel.app/)
-
-[OnPortfolio](https://front-end-portfolio.vercel.app/)
